@@ -3,58 +3,73 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>4 Tlapky</title>
+  <title>4TLAPKY</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <!-- Header -->
   <header class="header">
     <div class="container">
-      <h1 class="logo">4 Tlapky</h1>
+      <h1 class="logo">4TLAPKY</h1>
       <nav class="nav">
         <ul>
-          <li><a href="#uvod">Úvod</a></li>
-          <li><a href="#sluzby">Služby</a></li>
+          <li><a href="#onas">O nás</a></li>
+          <li><a href="#oteviraci-doba">Otevírací doba</a></li>
           <li><a href="#kontakt">Kontakt</a></li>
         </ul>
       </nav>
     </div>
   </header>
 
-  <section id="uvod" class="hero">
-    <div class="hero-content">
-      <h2>Pomoc pro psy a kočky</h2>
-      <p>Pečujeme o vaše čtyřnohé přátele s láskou a respektem.</p>
-      <img src="pes-kocka.jpg" alt="Pes a kočka" class="hero-image">
+  <!-- Hero sekce s obrázkem -->
+  <section class="hero">
+    <img src="pes-kocka.jpg" alt="Pes a kočka" class="hero-image">
+  </section>
+
+  <!-- Dvě sloupce pod obrázkem -->
+  <section class="info container">
+    <!-- Levý sloupec -->
+    <div id="oteviraci-doba" class="left">
+      <h2>Otevírací doba</h2>
+      <p>pondělí: 9–12 | 13–16:30</p>
+      <p>úterý: 8:30–12 | 13–16:30</p>
+      <p>středa: 8:30–12 | 13–16:30</p>
+      <p>čtvrtek: 8:30–12 | 13–16:30</p>
+      <p>pátek: 8:30–12 | 13–16:30</p>
+      <p>sobota: 8:30–11</p>
+      <p>neděle: Zavřeno</p>
+    </div>
+
+    <!-- Pravý sloupec -->
+    <div id="onas" class="right">
+      <h2>O nás</h2>
+      <p>
+        Jsme obchod s chovatelskými potřebami pro psy, kočky, hlodavce, ptáky i terarijní zvířata. 
+        Prodáváme krmiva pro hospodářská zvířata a rozšiřujeme prodej o rybářské nástrahy pro rybolov. 
+        Jsme na trhu od roku 2012 a náš sortiment pravidelně rozšiřujeme.
+      </p>
+      <a href="tel:777775202" class="btn">Zavolejte nám :)</a>
     </div>
   </section>
 
-  <section id="sluzby" class="services container">
-    <h2>Naše služby</h2>
-    <div class="services-grid">
-      <div class="service">
-        <h3>Veterinární péče</h3>
-        <p>Profesionální zdravotní péče o vaše mazlíčky.</p>
-      </div>
-      <div class="service">
-        <h3>Dočasná péče</h3>
-        <p>Postaráme se o vašeho pejska nebo kočku, když nemůžete.</p>
-      </div>
-      <div class="service">
-        <h3>Adopce</h3>
-        <p>Pomůžeme vám najít nového chlupatého parťáka.</p>
-      </div>
-    </div>
-  </section>
-
-  <section id="kontakt" class="contact container">
-    <h2>Kontaktujte nás</h2>
-    <p>Email: <a href="mailto:info@4tlapky.cz">info@4tlapky.cz</a></p>
-    <p>Telefon: +420 123 456 789</p>
-  </section>
-
+  <!-- Footer -->
   <footer class="footer">
     <div class="container">
-      <p>&copy; 2025 4 Tlapky. Všechna práva vyhrazena.</p>
+      <p class="slogan">
+        Rádi vám poradíme s výběrem, aby se Váš mazlíček měl co nejlépe.
+      </p>
+      <div class="footer-grid">
+        <div class="footer-left">
+          <h3>Kontakt</h3>
+          <p>Tel: <a href="tel:777775202">777 775 202</a></p>
+          <p>Email: <a href="mailto:4tlapkysro@email.cz">4tlapkysro@email.cz</a></p>
+        </div>
+        <div class="footer-right">
+          <h3>Najdete nás</h3>
+          <p>nám. T. G. Masaryka 92/5</p>
+          <p>751 31 Lipník nad Bečvou</p>
+        </div>
+      </div>
     </div>
   </footer>
 </body>
