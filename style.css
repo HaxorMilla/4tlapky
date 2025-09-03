@@ -355,7 +355,7 @@
 }
 
 /* --- Mobilní úpravy --- */
-@media (max-width: 480px) {
+@media (max-width: 3000px) {
   /* Posuv obrázků pomalejší */
   .slide-track {
     width: calc(8 * 100%);
