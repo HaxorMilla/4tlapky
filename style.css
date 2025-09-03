@@ -285,3 +285,22 @@
   }
 }
 
+.hero {
+  width: 100%;
+  height: 350px; /* PC výška */
+  border-top: 3px solid #111;
+  border-bottom: 3px solid #111;
+  border-radius: 8px;
+  
+  background-image: url('pozadi.png'); /* cesta k obrázku */
+  background-size: cover; /* obrázek vyplní celou sekci */
+  background-position: center; /* vycentrování */
+  background-repeat: no-repeat;
+}
+@media (max-width: 480px) {
+  .hero {
+    height: 250px; /* mobilní výška */
+    background-size: cover;
+    background-position: center;
+  }
+}
