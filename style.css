@@ -60,22 +60,21 @@
   width: 100%;
   margin: 20px auto;
   border-radius: 8px;
-  height: 350px;
+  height: 350px; /* výška pásu */
   border-top: 3px solid #111;
   border-bottom: 3px solid #111;
 }
 
 .slide-track {
   display: flex;
-  width: calc(8 * 25%);
-  animation: scroll 20s linear infinite;
+  width: calc(8 * 25%); /* počet obrázků x 25% */
+  animation: scroll 80s linear infinite; /* zpomalený posuv */
 }
 
 .slide-track img {
-  width: 25%;
-  height: 100%;
-  object-fit: cover;
-}
+  width: 25%;    /* každý obrázek zabírá čtvrtinu viditelného prostoru */
+  height: 100%;  /* zaplní celou výšku pásu */
+  object-fit: cover; /* zachová poměr stran a vyplní prostor */
 
 @keyframes scroll {
   0% { transform: translateX(0); }
