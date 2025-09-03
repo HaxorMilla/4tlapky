@@ -354,13 +354,18 @@
   }
 }
 
-/* --- Mobilní úpravy --- */
-@media (max-width: 3000px) {
-  /* Posuv obrázků pomalejší */
+/* Standardní animace pro desktop */
+@keyframes scroll {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+/* Pomalejší animace pro malé mobily */
+@media (max-width: 480px) {
   .slide-track {
-    width: calc(8 * 100%);
-    animation: scroll 40s linear infinite; /* dvojnásobná doba pro pomalejší posuv */
+    animation: scroll 40s linear infinite; /* dvojnásobně pomalejší než desktop */
   }
+}
 
   .slide-track img {
     width: 100%;
