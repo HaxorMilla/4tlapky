@@ -337,3 +337,20 @@
   }
 }
 
+@media (max-width: 480px) {
+  .slide-track {
+    width: calc(8 * 100%); /* 8 obrázků */
+    animation: scroll 20s linear infinite;
+  }
+
+  .slide-track img {
+    width: 100%; /* každý obrázek zabere celý viewport */
+    height: 200px; /* upravená výška pro mobil */
+  }
+
+  @keyframes scroll {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-700%); } /* posun o 7 obrázků */
+  }
+}
+
