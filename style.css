@@ -258,3 +258,30 @@
     min-width: auto;
   }
 }
+/* --- Hero / posouvání obrázků --- */
+.slide-track {
+  display: flex;
+  width: calc(8 * 25%);
+  animation: scroll 40s linear infinite; /* zrychleno z 80s na 40s */
+}
+
+@keyframes scroll {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+/* --- Header / nadpisy --- */
+.logo-left, .logo-right h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 56px; /* zvětšeno z 48px na 56px */
+  font-weight: bold;
+  color: #000;
+}
+
+/* --- Responzivní mobilní nadpisy --- */
+@media (max-width: 480px) {
+  .logo-left, .logo-right h1 {
+    font-size: 42px; /* zvětšeno z 36px na 42px */
+  }
+}
+
