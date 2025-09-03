@@ -28,6 +28,7 @@
   width: 90%;
   max-width: 1440px;
   margin: 0 auto;
+  flex-wrap: wrap;
 }
 
 .logo-left, .logo-right h1 {
@@ -210,182 +211,49 @@
   margin-top: 10px;
   border-radius: 20px;
 }
+
 /* --- Responzivní úpravy --- */
-@media (max-width: 1024px) {
+@media (max-width: 768px) {
+  .info {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+@media (max-width: 480px) {
+  /* Zvětšení textu hlavičky */
+  .logo-left, .logo-right h1 {
+    font-size: 36px;
+  }
+
+  /* Nápis TLAPKY pod logo */
   .header-container {
     flex-direction: column;
     gap: 10px;
   }
 
-  .logo-left, .logo-right h1 {
-    font-size: 36px;
-  }
-
   .logo-right {
     flex-direction: row;
-    align-items: center;
-    gap: 8px;
-  }
-
-  .hero {
-    height: 300px;
-  }
-
-  .slide-track img {
-    width: 50%;
-  }
-
-  .info {
-    flex-direction: column;
+    justify-content: center;
     align-items: center;
   }
 
-  .info .box {
-    width: 90%;
-    max-width: 500px;
-    margin-bottom: 20px;
-  }
-}
-
-@media (max-width: 768px) {
-  .logo-left, .logo-right h1 {
-    font-size: 28px;
+  .logo-right h1 {
+    font-size: 36px;
+    margin: 0;
   }
 
+  /* Pomalejší posuv obrázků */
+  .slide-track {
+    animation: scroll 40s linear infinite;
+  }
+
+  /* Zvýšení výšky obrázků */
   .hero {
     height: 250px;
   }
 
   .slide-track img {
-    width: 100%;
-  }
-
-  .info .box {
-    width: 95%;
-    padding: 20px;
+    height: 100%;
   }
 }
-
-@media (max-width: 480px) {
-  .header-container {
-    flex-direction: column;
-    gap: 5px;
-    text-align: center;
-  }
-
-  .logo-left, .logo-right h1 {
-    font-size: 24px;
-  }
-
-  .logo-right {
-    flex-direction: row;
-    justify-content: center;
-    gap: 5px;
-  }
-
-  .hero {
-    height: 180px;
-  }
-
-  .slide-track img {
-    width: 100%;
-  }
-
-  .info .box {
-    width: 100%;
-    padding: 15px;
-  }
-
-  .info h2 {
-    font-size: 24px;
-  }
-
-  #onas p {
-    font-size: 14px;
-  }
-
-  #onas .btn {
-    width: 150px;
-    padding: 8px 10px;
-  }
-
-  .contact-box {
-    padding: 20px;
-  }
-}
-
-@media (max-width: 480px) {
-  .header-container {
-    flex-direction: column; /* pod sebou */
-    align-items: center;
-    gap: 10px; /* mezera mezi ZVERIMEX a TLAPKY */
-    text-align: center;
-  }
-
-  .logo-left, .logo-right h1 {
-    font-size: 24px; /* zmenšit text, aby se vešel */
-  }
-
-  .logo-right {
-    flex-direction: row; /* logo.png + TLAPKY vedle sebe */
-    justify-content: center;
-    gap: 5px; /* mezera mezi logem a nápisem */
-  }
-
-  .logo-right .logo-img {
-    height: 40px; /* menší logo na mobilu */
-  }
-}
-
-@media (max-width: 480px) {
-  .slide-track {
-    width: calc(8 * 100%); /* 8 obrázků */
-    animation: scroll 20s linear infinite;
-  }
-
-  .slide-track img {
-    width: 100%; /* každý obrázek zabere celý viewport */
-    height: 200px; /* upravená výška pro mobil */
-  }
-
-  @keyframes scroll {
-    0% { transform: translateX(0); }
-    100% { transform: translateX(-700%); } /* posun o 7 obrázků */
-  }
-}
-
-/* Standardní animace pro desktop */
-@keyframes scroll {
-  0% { transform: translateX(0); }
-  100% { transform: translateX(-50%); }
-}
-
-/* Pomalejší animace pro malé mobily */
-@media (max-width: 480px) {
-  .slide-track {
-    animation: scroll 40s linear infinite; /* dvojnásobně pomalejší než desktop */
-  }
-}
-
-  .slide-track img {
-    width: 100%;
-    height: 200px; /* výška obrázků na mobilu */
-  }
-
-  /* Nadpisy ZVERIMEX a TLAPKY větší */
-  .header-container {
-    flex-direction: column; /* aby byly pod sebou */
-    align-items: center;
-    gap: 10px;
-  }
-
-  .logo-left, .logo-right h1 {
-    font-size: 36px; /* zvětšený text na mobilu */
-    text-align: center;
-  }
-
-  .logo-right .logo-img {
-    height: 50px; /* případně upravit podle potřeby */
-  }
-}
-
