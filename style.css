@@ -313,3 +313,27 @@
     padding: 20px;
   }
 }
+
+@media (max-width: 480px) {
+  .header-container {
+    flex-direction: column; /* pod sebou */
+    align-items: center;
+    gap: 10px; /* mezera mezi ZVERIMEX a TLAPKY */
+    text-align: center;
+  }
+
+  .logo-left, .logo-right h1 {
+    font-size: 24px; /* zmenšit text, aby se vešel */
+  }
+
+  .logo-right {
+    flex-direction: row; /* logo.png + TLAPKY vedle sebe */
+    justify-content: center;
+    gap: 5px; /* mezera mezi logem a nápisem */
+  }
+
+  .logo-right .logo-img {
+    height: 40px; /* menší logo na mobilu */
+  }
+}
+
