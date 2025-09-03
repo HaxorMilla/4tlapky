@@ -219,41 +219,42 @@
     align-items: center;
   }
 }
-
 @media (max-width: 480px) {
-  /* Zvětšení textu hlavičky */
+  /* Zvýšení textu hlavičky */
   .logo-left, .logo-right h1 {
-    font-size: 36px;
+    font-size: 48px;
   }
 
   /* Nápis TLAPKY pod logo */
   .header-container {
     flex-direction: column;
-    gap: 10px;
+    gap: 15px;
   }
 
   .logo-right {
     flex-direction: row;
     justify-content: center;
     align-items: center;
+    gap: 15px;
   }
 
   .logo-right h1 {
-    font-size: 36px;
+    font-size: 48px;
     margin: 0;
   }
 
   /* Pomalejší posuv obrázků */
   .slide-track {
-    animation: scroll 40s linear infinite;
+    animation: scroll 80s linear infinite;
   }
 
   /* Zvýšení výšky obrázků */
   .hero {
-    height: 250px;
+    height: 300px;
   }
 
   .slide-track img {
     height: 100%;
   }
 }
+
