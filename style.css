@@ -354,3 +354,33 @@
   }
 }
 
+/* --- Mobilní úpravy --- */
+@media (max-width: 480px) {
+  /* Posuv obrázků pomalejší */
+  .slide-track {
+    width: calc(8 * 100%);
+    animation: scroll 40s linear infinite; /* dvojnásobná doba pro pomalejší posuv */
+  }
+
+  .slide-track img {
+    width: 100%;
+    height: 200px; /* výška obrázků na mobilu */
+  }
+
+  /* Nadpisy ZVERIMEX a TLAPKY větší */
+  .header-container {
+    flex-direction: column; /* aby byly pod sebou */
+    align-items: center;
+    gap: 10px;
+  }
+
+  .logo-left, .logo-right h1 {
+    font-size: 36px; /* zvětšený text na mobilu */
+    text-align: center;
+  }
+
+  .logo-right .logo-img {
+    height: 50px; /* případně upravit podle potřeby */
+  }
+}
+
