@@ -28,7 +28,6 @@
   width: 90%;
   max-width: 1440px;
   margin: 0 auto;
-  flex-wrap: wrap;
 }
 
 .logo-left, .logo-right h1 {
@@ -60,21 +59,22 @@
   width: 100%;
   margin: 20px auto;
   border-radius: 8px;
-  height: 350px; /* výška pásu */
+  height: 350px; /* PC výška */
   border-top: 3px solid #111;
   border-bottom: 3px solid #111;
 }
 
 .slide-track {
   display: flex;
-  width: calc(8 * 25%); /* počet obrázků x 25% */
-  animation: scroll 80s linear infinite; /* zpomalený posuv */
+  width: calc(8 * 25%);
+  animation: scroll 80s linear infinite;
 }
 
 .slide-track img {
-  width: 25%;    /* každý obrázek zabírá čtvrtinu viditelného prostoru */
-  height: 100%;  /* zaplní celou výšku pásu */
-  object-fit: cover; /* zachová poměr stran a vyplní prostor */
+  width: 25%;
+  height: 100%;
+  object-fit: cover;
+}
 
 @keyframes scroll {
   0% { transform: translateX(0); }
@@ -211,49 +211,50 @@
   border-radius: 20px;
 }
 
-/* --- Responzivní úpravy --- */
-@media (max-width: 768px) {
-  .info {
-    flex-direction: column;
-    align-items: center;
-  }
-}
+/* --- Responzivní úpravy pro mobil --- */
 @media (max-width: 480px) {
-  /* Zvýšení textu hlavičky */
-  .logo-left, .logo-right h1 {
-    font-size: 48px;
-  }
 
-  /* Nápis TLAPKY pod logo */
+  /* Header */
   .header-container {
     flex-direction: column;
-    gap: 15px;
+    gap: 10px;
+    align-items: center;
+  }
+
+  .logo-left, .logo-right h1 {
+    font-size: 36px; /* větší nápis na mobilu */
   }
 
   .logo-right {
     flex-direction: row;
-    justify-content: center;
+    gap: 5px;
     align-items: center;
-    gap: 15px;
   }
 
-  .logo-right h1 {
-    font-size: 48px;
-    margin: 0;
+  .logo-right .logo-img {
+    height: 50px;
   }
 
-  /* Pomalejší posuv obrázků */
-  .slide-track {
-    animation: scroll 80s linear infinite;
-  }
-
-  /* Zvýšení výšky obrázků */
+  /* Hero - mobil */
   .hero {
-    height: 300px;
+    height: 250px; /* vyšší, aby obrázky byly větší */
   }
 
   .slide-track img {
-    height: 100%;
+    width: auto; /* obrázky zachovají proporce */
+    height: 100%; /* zaplní výšku */
+    flex-shrink: 0;
+  }
+
+  /* Info boxy pod sebou */
+  .info {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .info .box {
+    width: 90%;
+    min-width: auto;
   }
 }
-
