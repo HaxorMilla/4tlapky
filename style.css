@@ -304,3 +304,23 @@
     background-position: center;
   }
 }
+/* Hero: šířka podle boxů */
+.hero {
+  background-image: url('pozadi.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  border-top: 3px solid #111;
+  border-bottom: 3px solid #111;
+  border-radius: 8px;
+
+  /* Výška zůstane fixní, nebo podle potřeby */
+  height: 350px;
+
+  /* Šířka přesně podle boxů */
+  display: block;
+  width: calc(705px + 705px + 30px); /* šířka 2 boxů + gap mezi nimi */
+  max-width: 100%;
+  margin: 20px auto; /* centrování */
+}
