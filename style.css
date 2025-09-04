@@ -1,19 +1,19 @@
-/* Reset */
+/* --- Reset --- */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/* Body */
+/* --- Body --- */
 body {
-  background-color: #f4f4f4; /* jemné šedé pozadí */
+  background-color: #f4f4f4;
   color: #333;
   font-family: 'Roboto', sans-serif;
   line-height: 1.6;
 }
 
-/* Container */
+/* --- Container --- */
 .container {
   width: 90%;
   max-width: 1440px;
@@ -21,7 +21,7 @@ body {
   position: relative;
 }
 
-/* Header */
+/* --- Header --- */
 .header {
   background: #fff;
   color: #000;
@@ -32,22 +32,37 @@ body {
 .header-container {
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-start;
   flex-wrap: wrap;
-  padding: 0 20px; /* prostor od krajů */
+  padding: 0 10%;   /* odsazení od krajů stránky */
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
-.logo-left, .logo-right h1 {
+.logo-left, .logo-right {
+  width: 48%; /* PC: šířka přesně nad boxy */
+}
+
+.logo-left {
   font-family: 'Montserrat', sans-serif;
   font-size: 56px;
   font-weight: 700;
+  text-align: left;  /* nad levý box */
+  margin-bottom: 20px; /* mezera nad boxem */
   color: #000;
 }
 
 .logo-right {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 56px;
+  font-weight: 700;
+  text-align: right; /* nad pravý box */
   display: flex;
+  justify-content: flex-end;
   align-items: center;
-  gap: 20px; /* větší mezera mezi obrázkem a TLAPKY */
+  gap: 10px;
+  margin-bottom: 20px; /* mezera nad boxem */
+  color: #000;
 }
 
 .logo-right .logo-img {
@@ -60,7 +75,7 @@ body {
   padding-bottom: 5px;
 }
 
-/* Hero */
+/* --- Hero sekce --- */
 .hero {
   width: 100%;
   height: 60vh;
@@ -68,15 +83,11 @@ body {
   border-radius: 8px;
   border-top: 3px solid #111;
   border-bottom: 3px solid #111;
-
-  /* obrázek */
-  background-image: url('pozadi.png'); /* správná cesta k obrázku */
+  background-image: url('pozadi.png'); /* správná cesta */
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   background-attachment: fixed; /* parallax efekt na PC */
-
-  /* jemná animace zoom */
   animation: heroZoom 20s infinite alternate ease-in-out;
 }
 
@@ -85,7 +96,7 @@ body {
   to   { background-size: 110%; }
 }
 
-/* Info sekce */
+/* --- Info sekce --- */
 .info {
   display: flex;
   justify-content: center;
@@ -158,7 +169,7 @@ body {
   transform: translateY(-2px);
 }
 
-/* Footer */
+/* --- Footer --- */
 .footer {
   background: #f4f4f4;
   color: #333;
@@ -167,7 +178,6 @@ body {
 }
 
 .footer .slogan {
-  color: #333;
   text-align: center;
   margin-bottom: 30px;
   font-size: 28px;
@@ -176,7 +186,7 @@ body {
 .footer-contact {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: center; /* vycentrování na PC i mobil */
   gap: 20px;
 }
 
@@ -229,7 +239,7 @@ body {
   border-radius: 15px;
 }
 
-/* Fade-in efekt */
+/* --- Fade-in efekt --- */
 .fade-in {
   opacity: 0;
   transform: translateY(40px);
@@ -250,8 +260,8 @@ body {
 
   .header-container {
     flex-direction: column;
-    gap: 10px;
     align-items: center;
+    gap: 10px;
   }
 
   .logo-left, .logo-right h1 {
@@ -276,27 +286,100 @@ body {
   .footer-contact {
     flex-direction: column;
     gap: 30px;
+    align-items: center; /* vycentrované na mobilu */
+  }
+
+  .logo-left, .logo-right {
+    width: 100%;
+    text-align: center; /* nadpisy nad sebou */
   }
 }
-
-.header-container {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  padding: 0 10%; /* odsazení od krajů stránky */
-  max-width: 1200px; /* aby se drželo zarovnání boxů */
-  margin: 0 auto;
+/* --- Header nadpisy PC --- */
+.logo-left, .logo-right {
+  width: auto; /* necháme automatickou šířku, aby nadpisy nebyly přehnané */
 }
 
 .logo-left {
+  font-size: 42px;  /* snížená velikost nadpisu */
   text-align: left;
-  /* začíná přesně u levého okraje levého boxu */
+  margin-bottom: 20px;
 }
 
 .logo-right {
+  font-size: 42px;  /* snížená velikost nadpisu */
   text-align: right;
   display: flex;
+  justify-content: flex-end;
   align-items: center;
   gap: 10px;
-  /* končí přesně u pravého okraje pravého boxu */
+  margin-bottom: 20px;
+}
+
+/* --- Hero sekce PC --- */
+.hero {
+  width: 100%;       /* plná šířka */
+  height: 60vh;      /* zachována výška */
+  margin: 0 auto;    /* odstraněn extra margin */
+  border-radius: 8px;
+  border-top: 3px solid #111;
+  border-bottom: 3px solid #111;
+  background-image: url('pozadi.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  animation: heroZoom 20s infinite alternate ease-in-out;
+}
+
+/* --- Header nadpisy PC --- */
+.logo-left, .logo-right h1 {
+  font-size: 42px;      /* stejná velikost nadpisů */
+  font-weight: 700;
+  line-height: 1.1;     /* zarovnání vertikálně */
+}
+
+.logo-right {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo-right .logo-img {
+  height: 60px;          /* necháme logo menší než text, aby nepřevyšovalo TLAPKY */
+}
+
+.hero {
+  width: 100%;
+  height: 60vh;
+  margin: 20px auto;
+  border-radius: 25px; /* větší zakulacení rohů */
+  /* odstraníme černé orámování */
+  border-top: none;
+  border-bottom: none;
+
+  background-image: url('pozadi.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+
+  animation: heroZoom 20s infinite alternate ease-in-out;
+}
+.hero {
+  background-color: #f4f4f4; /* stejná barva jako body */
+}
+.hero {
+  margin: 20px auto 0 auto; /* horní margin jen 0 nebo menší */
+}
+.hero {
+  margin: 0 auto;             /* odstraníme horní prázdný pruh */
+  background-color: #f4f4f4;  /* sjednotíme s pozadím stránky */
+  border-radius: 25px;        /* hezky zaoblené rohy */
+  background-image: url('pozadi.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  animation: heroZoom 20s infinite alternate ease-in-out;
 }
