@@ -269,3 +269,20 @@
   opacity: 1;
   transform: translateY(0);
 }
+
+.hero {
+  background-image: url("hero.jpg");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  height: 60vh;
+  width: 100%;
+}
+
+/* Na mobilech vypnout fixed */
+@media (max-width: 768px) {
+  .hero {
+    background-attachment: scroll;
+  }
+}
+
