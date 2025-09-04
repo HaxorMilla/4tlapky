@@ -258,11 +258,11 @@ body {
   }
 
   .logo-right .logo-img {
-    height: 70px;
+    height: 80px;
   }
 
   .logo-right .tlapky-text {
-    font-size: 8vw; /* dynamická velikost na mobil */
+    font-size: 11vw; /* dynamická velikost na mobil */
     border-bottom: 3px solid #ff9800;
     padding-bottom: 5px;
   }
@@ -304,4 +304,5 @@ body {
   text-decoration: underline;
   color: #e68900;
 }
+
 
