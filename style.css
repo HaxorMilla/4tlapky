@@ -283,7 +283,7 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
-  padding: 0 0%; /* odsazení od krajů stránky */
+  padding: 0 10%; /* odsazení od krajů stránky */
   max-width: 1200px; /* aby se drželo zarovnání boxů */
   margin: 0 auto;
 }
