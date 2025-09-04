@@ -414,3 +414,55 @@ body {
     animation: none;            /* zrušíme zoom animaci */
   }
 }
+/* --- Hero wrapper --- */
+.hero-wrapper {
+  width: 100vw;           /* přes celou šířku */
+  overflow: hidden;        /* skryje přesahující části */
+  margin: 0;               /* žádný margin nahoře */
+  border-radius: 25px 25px 0 0; /* zaoblení jen nahoře */
+}
+
+/* --- Hero sekce --- */
+.hero {
+  width: 100%;              /* vyplní wrapper */
+  height: 60vh;             /* výška PC */
+  margin: 0;
+  border-radius: 0;         /* nulové, protože wrapper má radius */
+  
+  background-image: url('pozadi.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;  /* parallax efekt PC */
+  animation: heroZoom 20s infinite alternate ease-in-out;
+}
+
+/* --- Animace přiblížení --- */
+@keyframes heroZoom {
+  from { background-size: 100%; }
+  to   { background-size: 110%; }
+}
+
+/* --- Mobilní verze --- */
+@media (max-width: 768px) {
+  .hero-wrapper {
+    border-radius: 25px;    /* zachováme radius i na mobilu */
+  }
+  
+  .hero {
+    height: 40vh;           /* nižší výška na mobil */
+    background-attachment: scroll; /* statický obrázek */
+    animation: none;        /* bez zoom efektu */
+  }
+}
+/* --- Hero wrapper --- */
+.hero-wrapper {
+  width: 100%;          /* místo 100vw */
+  max-width: 100%;      /* zajistí, že nepřesáhne viewport */
+  overflow: hidden;     /* schová přebytečné části */
+  margin: 0;            /* žádný margin nahoře */
+  border-radius: 25px 25px 0 0; /* zaoblení jen nahoře */
+}
+body {
+  overflow-x: hidden;  /* zabrání horizontálnímu scrollu */
+}
