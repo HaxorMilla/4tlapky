@@ -346,7 +346,7 @@ body {
 }
 
 .logo-right .logo-img {
-  height: 60px;          /* necháme logo menší než text, aby nepřevyšovalo TLAPKY */
+  height: 80px;          /* necháme logo menší než text, aby nepřevyšovalo TLAPKY */
 }
 
 .hero {
@@ -383,12 +383,34 @@ body {
   background-attachment: fixed;
   animation: heroZoom 20s infinite alternate ease-in-out;
 }
+/* --- Hero pro PC --- */
+.hero {
+  width: 100%;
+  height: 60vh;
+  margin: 20px auto;
+  border-radius: 25px;
+  background-image: url('pozadi.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed; /* parallax na PC */
+  animation: heroZoom 20s infinite alternate ease-in-out;
+}
+
+/* Animace přiblížení pro PC */
+@keyframes heroZoom {
+  from { background-size: 100%; }
+  to   { background-size: 110%; }
+}
+
+/* --- Hero pro mobil --- */
 @media (max-width: 768px) {
   .hero {
-    background-attachment: scroll; /* místo fixed, mobil zobrazí obrázek */
-    height: 40vh;                  /* výška hero na mobil */
-    background-size: cover;        /* aby vyplnil celý box */
-    background-position: center;   /* zachování pozice */
-    border-radius: 25px;           /* zachová zakulacení rohů */
+    height: 40vh;               /* výška na mobil */
+    background-attachment: scroll; /* odstraníme fix */
+    background-size: cover;     /* aby vyplnil celý box */
+    background-position: center;
+    border-radius: 25px;        /* zachováme zakulacení rohů */
+    animation: none;            /* zrušíme zoom animaci */
   }
 }
