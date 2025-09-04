@@ -11,6 +11,7 @@ body {
   color: #333;
   font-family: 'Roboto', sans-serif;
   line-height: 1.6;
+  overflow-x: hidden; /* zabrání horizontálnímu scrollu */
 }
 
 /* --- Container --- */
@@ -23,7 +24,7 @@ body {
 
 /* --- Header --- */
 .header {
-  background: #fff;
+  background: #f4f4f4;
   color: #000;
   padding: 20px 0;
   box-shadow: 0 2px 5px rgba(0,0,0,0.1);
@@ -34,39 +35,38 @@ body {
   justify-content: space-between;
   align-items: flex-start;
   flex-wrap: wrap;
-  padding: 0 10%;   /* odsazení od krajů stránky */
+  padding: 0 10%;
   max-width: 1200px;
   margin: 0 auto;
 }
 
 .logo-left, .logo-right {
-  width: 48%; /* PC: šířka přesně nad boxy */
+  width: auto;
 }
 
 .logo-left {
   font-family: 'Montserrat', sans-serif;
-  font-size: 56px;
+  font-size: 42px;
   font-weight: 700;
-  text-align: left;  /* nad levý box */
-  margin-bottom: 20px; /* mezera nad boxem */
+  text-align: left;
+  margin-bottom: 20px;
   color: #000;
 }
 
 .logo-right {
   font-family: 'Montserrat', sans-serif;
-  font-size: 56px;
+  font-size: 42px;
   font-weight: 700;
-  text-align: right; /* nad pravý box */
   display: flex;
   justify-content: flex-end;
   align-items: center;
   gap: 10px;
-  margin-bottom: 20px; /* mezera nad boxem */
+  margin-bottom: 20px;
   color: #000;
 }
 
 .logo-right .logo-img {
-  height: 60px;
+  height: 80px;
   display: block;
 }
 
@@ -75,15 +75,22 @@ body {
   padding-bottom: 5px;
 }
 
+/* --- Hero wrapper --- */
+.hero-wrapper {
+  width: 100%;
+  max-width: 100%;
+  margin: 0;
+  padding: 0;
+  overflow: hidden; /* skryje přesahující části */
+}
+
 /* --- Hero sekce --- */
 .hero {
   width: 100%;
-  height: 60vh;
-  margin: 20px auto;
-  border-radius: 8px;
-  border-top: 3px solid #111;
-  border-bottom: 3px solid #111;
-  background-image: url('pozadi.png'); /* správná cesta */
+  height: 60vh;                /* výška PC */
+  margin: 0;                   /* žádný margin */
+  border-radius: 0;            /* žádné zaoblení rohů */
+  background-image: url('pozadi.png');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -91,9 +98,10 @@ body {
   animation: heroZoom 20s infinite alternate ease-in-out;
 }
 
+/* --- Animace přiblížení --- */
 @keyframes heroZoom {
   from { background-size: 100%; }
-  to   { background-size: 110%; }
+  to { background-size: 110%; }
 }
 
 /* --- Info sekce --- */
@@ -128,6 +136,7 @@ body {
   color: #ff9800;
 }
 
+/* --- Schedule --- */
 .schedule {
   width: 100%;
   border-collapse: collapse;
@@ -142,6 +151,7 @@ body {
   background: #f0f0f0;
 }
 
+/* --- #onas tlačítko --- */
 #onas p {
   font-size: 16px;
   margin-bottom: 10px;
@@ -186,7 +196,7 @@ body {
 .footer-contact {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center; /* vycentrování na PC i mobil */
+  justify-content: center;
   gap: 20px;
 }
 
@@ -234,11 +244,6 @@ body {
   text-decoration: underline;
 }
 
-.footer-map iframe {
-  margin-top: 10px;
-  border-radius: 15px;
-}
-
 /* --- Fade-in efekt --- */
 .fade-in {
   opacity: 0;
@@ -256,6 +261,7 @@ body {
   .hero {
     height: 40vh;
     background-attachment: scroll;
+    animation: none;
   }
 
   .header-container {
@@ -286,183 +292,80 @@ body {
   .footer-contact {
     flex-direction: column;
     gap: 30px;
-    align-items: center; /* vycentrované na mobilu */
+    align-items: center;
   }
 
   .logo-left, .logo-right {
     width: 100%;
-    text-align: center; /* nadpisy nad sebou */
+    text-align: center;
   }
 }
-/* --- Header nadpisy PC --- */
-.logo-left, .logo-right {
-  width: auto; /* necháme automatickou šířku, aby nadpisy nebyly přehnané */
-}
-
+/* --- Header nadpisy a logo --- */
 .logo-left {
-  font-size: 42px;  /* snížená velikost nadpisu */
-  text-align: left;
-  margin-bottom: 20px;
-}
-
-.logo-right {
-  font-size: 42px;  /* snížená velikost nadpisu */
-  text-align: right;
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-  gap: 10px;
-  margin-bottom: 20px;
-}
-
-/* --- Hero sekce PC --- */
-.hero {
-  width: 100%;       /* plná šířka */
-  height: 60vh;      /* zachována výška */
-  margin: 0 auto;    /* odstraněn extra margin */
-  border-radius: 8px;
-  border-top: 3px solid #111;
-  border-bottom: 3px solid #111;
-  background-image: url('pozadi.png');
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  animation: heroZoom 20s infinite alternate ease-in-out;
-}
-
-/* --- Header nadpisy PC --- */
-.logo-left, .logo-right h1 {
-  font-size: 42px;      /* stejná velikost nadpisů */
-  font-weight: 700;
-  line-height: 1.1;     /* zarovnání vertikálně */
-}
-
-.logo-right {
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-  gap: 10px;
+  font-size: 50px; /* menší než původních 42px - ZVERIMEX text */
 }
 
 .logo-right .logo-img {
-  height: 80px;          /* necháme logo menší než text, aby nepřevyšovalo TLAPKY */
+  height: 80px; /* menší než původních 80px - obrázek LOGO */
 }
 
-.hero {
-  width: 100%;
-  height: 60vh;
-  margin: 20px auto;
-  border-radius: 25px; /* větší zakulacení rohů */
-  /* odstraníme černé orámování */
-  border-top: none;
-  border-bottom: none;
-
-  background-image: url('pozadi.png');
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-
-  animation: heroZoom 20s infinite alternate ease-in-out;
-}
-.hero {
-  background-color: #f4f4f4; /* stejná barva jako body */
-}
-.hero {
-  margin: 20px auto 0 auto; /* horní margin jen 0 nebo menší */
-}
-.hero {
-  margin: 0 auto;             /* odstraníme horní prázdný pruh */
-  background-color: #f4f4f4;  /* sjednotíme s pozadím stránky */
-  border-radius: 25px;        /* hezky zaoblené rohy */
-  background-image: url('pozadi.png');
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  animation: heroZoom 20s infinite alternate ease-in-out;
-}
-/* --- Hero pro PC --- */
-.hero {
-  width: 100%;
-  height: 60vh;
-  margin: 20px auto;
-  border-radius: 25px;
-  background-image: url('pozadi.png');
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-attachment: fixed; /* parallax na PC */
-  animation: heroZoom 20s infinite alternate ease-in-out;
-}
-
-/* Animace přiblížení pro PC */
-@keyframes heroZoom {
-  from { background-size: 100%; }
-  to   { background-size: 110%; }
-}
-
-/* --- Hero pro mobil --- */
-@media (max-width: 768px) {
-  .hero {
-    height: 40vh;               /* výška na mobil */
-    background-attachment: scroll; /* odstraníme fix */
-    background-size: cover;     /* aby vyplnil celý box */
-    background-position: center;
-    border-radius: 25px;        /* zachováme zakulacení rohů */
-    animation: none;            /* zrušíme zoom animaci */
-  }
-}
-/* --- Hero wrapper --- */
-.hero-wrapper {
-  width: 100vw;           /* přes celou šířku */
-  overflow: hidden;        /* skryje přesahující části */
-  margin: 0;               /* žádný margin nahoře */
-  border-radius: 25px 25px 0 0; /* zaoblení jen nahoře */
-}
-
-/* --- Hero sekce --- */
-.hero {
-  width: 100%;              /* vyplní wrapper */
-  height: 60vh;             /* výška PC */
+.logo-right h1 {
+  font-size: 70px; /* TLAPKY text - menší než původních 42px */
   margin: 0;
-  border-radius: 0;         /* nulové, protože wrapper má radius */
-  
-  background-image: url('pozadi.png');
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-attachment: fixed;  /* parallax efekt PC */
-  animation: heroZoom 20s infinite alternate ease-in-out;
+  line-height: 1.2;
+  display: flex;
+  align-items: center; /* vertikálně vycentruje text vedle loga */
+}
+/* --- Logo a TLAPKY uprostřed --- */
+.header-container {
+  display: flex;
+  justify-content: center; /* vycentruje celý obsah */
+  align-items: center;
+  flex-wrap: nowrap;
+  padding: 0;
+  margin: 0 auto;
 }
 
-/* --- Animace přiblížení --- */
-@keyframes heroZoom {
-  from { background-size: 100%; }
-  to   { background-size: 110%; }
+.logo-right {
+  display: flex;
+  align-items: center;
+  gap: 10px; /* mezera mezi logem a textem */
 }
 
-/* --- Mobilní verze --- */
-@media (max-width: 768px) {
-  .hero-wrapper {
-    border-radius: 25px;    /* zachováme radius i na mobilu */
-  }
-  
-  .hero {
-    height: 40vh;           /* nižší výška na mobil */
-    background-attachment: scroll; /* statický obrázek */
-    animation: none;        /* bez zoom efektu */
-  }
+.logo-right .logo-img {
+  height: 100px; /* velikost loga */
 }
-/* --- Hero wrapper --- */
-.hero-wrapper {
-  width: 100%;          /* místo 100vw */
-  max-width: 100%;      /* zajistí, že nepřesáhne viewport */
-  overflow: hidden;     /* schová přebytečné části */
-  margin: 0;            /* žádný margin nahoře */
-  border-radius: 25px 25px 0 0; /* zaoblení jen nahoře */
+
+.logo-right h1 {
+  font-size: 70px;  /* velikost textu TLAPKY */
+  margin: 0;
+  line-height: 1.2;
 }
-body {
-  overflow-x: hidden;  /* zabrání horizontálnímu scrollu */
+.contact-box .footer-map {
+  margin-top: 0;        /* odstraní horní mezeru */
+}
+
+.contact-box .footer-map iframe {
+  width: 100%;
+  height: 300px;        /* původně 200px, teď +10px směrem dolů */
+  border: 0;
+  border-radius: 15px;
+}
+.site-credit {
+  text-align: center;
+  font-size: 14px;
+  color: #777;
+  margin: 20px 0;
+  font-family: 'Roboto', sans-serif;
+}
+
+.site-credit a {
+  color: #ff9800;       /* oranžová, ladí s designem */
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.site-credit a:hover {
+  text-decoration: underline;
+  color: #e68900;       /* tmavší oranžová při hoveru */
 }
