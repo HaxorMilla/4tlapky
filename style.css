@@ -383,3 +383,12 @@ body {
   background-attachment: fixed;
   animation: heroZoom 20s infinite alternate ease-in-out;
 }
+@media (max-width: 768px) {
+  .hero {
+    background-attachment: scroll; /* místo fixed, mobil zobrazí obrázek */
+    height: 40vh;                  /* výška hero na mobil */
+    background-size: cover;        /* aby vyplnil celý box */
+    background-position: center;   /* zachování pozice */
+    border-radius: 25px;           /* zachová zakulacení rohů */
+  }
+}
