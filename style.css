@@ -313,3 +313,22 @@ body {
   text-decoration: underline;
   color: #e68900;
 }
+
+.logo-right .tlapky-text {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 70px;
+  font-weight: 700;
+  line-height: 1.2;
+  border-bottom: 3px solid #ff9800; /* čára pouze pod textem */
+  padding-bottom: 5px;
+  display: inline-block; /* důležité, aby se čára vykreslila pod textem */
+  text-align: center;
+  vertical-align: middle; /* zarovná s logem */
+}
+
+.logo-right {
+  display: flex;
+  flex-direction: row; /* vedle sebe */
+  align-items: center;
+  gap: 10px;
+}
