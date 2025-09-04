@@ -11,6 +11,7 @@
   max-width: 1440px;
   margin: 0 auto;
   position: relative;
+  font-family: 'Roboto', sans-serif;
 }
 
 /* Header */
@@ -32,7 +33,7 @@
 
 .logo-left, .logo-right h1 {
   font-family: 'Playfair Display', serif;
-  font-size: 48px;
+  font-size: 56px;
   font-weight: bold;
   color: #000;
 }
@@ -55,30 +56,24 @@
 
 /* Hero */
 .hero {
-  overflow: hidden;
   width: 100%;
+  height: 350px;
   margin: 20px auto;
   border-radius: 8px;
-  height: 350px; /* PC výška */
   border-top: 3px solid #111;
   border-bottom: 3px solid #111;
+
+  background-image: url('pozadi.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  animation: heroZoom 20s infinite alternate ease-in-out;
 }
 
-.slide-track {
-  display: flex;
-  width: calc(8 * 25%);
-  animation: scroll 80s linear infinite;
-}
-
-.slide-track img {
-  width: 25%;
-  height: 100%;
-  object-fit: cover;
-}
-
-@keyframes scroll {
-  0% { transform: translateX(0); }
-  100% { transform: translateX(-50%); }
+@keyframes heroZoom {
+  from { background-size: 100%; }
+  to   { background-size: 110%; }
 }
 
 /* Info sekce */
@@ -132,15 +127,18 @@
   text-align: center;
   margin: 15px auto 0 auto;
   padding: 10px 12px;
-  background: #ff9800;
+  background: linear-gradient(90deg, #ff9800, #ffb84d);
   color: #fff;
   border-radius: 5px;
   text-decoration: none;
   font-weight: bold;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+  transition: background 0.3s, box-shadow 0.3s;
 }
 
 #onas .btn:hover {
-  background: #e68900;
+  background: linear-gradient(90deg, #e68900, #ff9800);
+  box-shadow: 0 6px 15px rgba(0,0,0,0.2);
 }
 
 /* Footer */
@@ -186,6 +184,11 @@
 .contact-box .icon {
   font-size: 36px;
   margin-bottom: 10px;
+  transition: transform 0.3s;
+}
+
+.contact-box .icon:hover {
+  transform: scale(1.2);
 }
 
 .contact-box h3 {
@@ -200,9 +203,11 @@
 .contact-box a {
   color: #1877F2;
   text-decoration: none;
+  transition: color 0.3s;
 }
 
 .contact-box a:hover {
+  color: #ff9800;
   text-decoration: underline;
 }
 
@@ -213,8 +218,6 @@
 
 /* --- Responzivní úpravy pro mobil --- */
 @media (max-width: 480px) {
-
-  /* Header */
   .header-container {
     flex-direction: column;
     gap: 10px;
@@ -222,31 +225,19 @@
   }
 
   .logo-left, .logo-right h1 {
-    font-size: 36px; /* větší nápis na mobilu */
-  }
-
-  .logo-right {
-    flex-direction: row;
-    gap: 5px;
-    align-items: center;
+    font-size: 42px;
   }
 
   .logo-right .logo-img {
     height: 50px;
   }
 
-  /* Hero - mobil */
   .hero {
-    height: 250px; /* vyšší, aby obrázky byly větší */
+    height: 250px;
+    background-size: cover;
+    background-position: center;
   }
 
-  .slide-track img {
-    width: auto; /* obrázky zachovají proporce */
-    height: 100%; /* zaplní výšku */
-    flex-shrink: 0;
-  }
-
-  /* Info boxy pod sebou */
   .info {
     flex-direction: column;
     align-items: center;
@@ -257,70 +248,24 @@
     width: 90%;
     min-width: auto;
   }
-}
-/* --- Hero / posouvání obrázků --- */
-.slide-track {
-  display: flex;
-  width: calc(8 * 25%);
-  animation: scroll 40s linear infinite; /* zrychleno z 80s na 40s */
-}
 
-@keyframes scroll {
-  0% { transform: translateX(0); }
-  100% { transform: translateX(-50%); }
-}
+  .footer-contact {
+    flex-direction: column;
+    gap: 30px;
+  }
 
-/* --- Header / nadpisy --- */
-.logo-left, .logo-right h1 {
-  font-family: 'Playfair Display', serif;
-  font-size: 56px; /* zvětšeno z 48px na 56px */
-  font-weight: bold;
-  color: #000;
-}
-
-/* --- Responzivní mobilní nadpisy --- */
-@media (max-width: 480px) {
-  .logo-left, .logo-right h1 {
-    font-size: 42px; /* zvětšeno z 36px na 42px */
+  .contact-box {
+    width: 100%;
   }
 }
-
-.hero {
-  width: 100%;
-  height: 350px; /* PC výška */
-  border-top: 3px solid #111;
-  border-bottom: 3px solid #111;
-  border-radius: 8px;
-  
-  background-image: url('pozadi.png'); /* cesta k obrázku */
-  background-size: cover; /* obrázek vyplní celou sekci */
-  background-position: center; /* vycentrování */
-  background-repeat: no-repeat;
+/* Fade-in efekt */
+.fade-in {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 1s ease, transform 1s ease;
 }
-@media (max-width: 480px) {
-  .hero {
-    height: 250px; /* mobilní výška */
-    background-size: cover;
-    background-position: center;
-  }
-}
-/* Hero: šířka podle boxů */
-.hero {
-  background-image: url('pozadi.png');
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
 
-  border-top: 3px solid #111;
-  border-bottom: 3px solid #111;
-  border-radius: 8px;
-
-  /* Výška zůstane fixní, nebo podle potřeby */
-  height: 350px;
-
-  /* Šířka přesně podle boxů */
-  display: block;
-  width: calc(705px + 705px + 30px); /* šířka 2 boxů + gap mezi nimi */
-  max-width: 100%;
-  margin: 20px auto; /* centrování */
+.fade-in.show {
+  opacity: 1;
+  transform: translateY(0);
 }

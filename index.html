@@ -5,15 +5,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>ZVERIMEX - 4TLAPKY</title>
   <link rel="stylesheet" href="style.css">
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Georgia&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Roboto:wght@400&display=swap" rel="stylesheet">
 </head>
 <body>
 
 <header class="header">
   <div class="header-container">
     <h1 class="logo-left underline">ZVERIMEX</h1>
-
-    <!-- Logo + nápis TLAPKY pohromadě -->
     <div class="logo-right">
       <img src="logo.png" alt="Logo 4Tlapky" class="logo-img">
       <h1 class="underline">TLAPKY</h1>
@@ -21,13 +19,10 @@
   </div>
 </header>
 
-<section class="hero">
-  <!-- Statické pozadí -->
-</section>
+<section class="hero"></section>
 
 <section class="info container">
-  <!-- Levý box: Otevírací doba -->
-  <div id="OTEVÍRACÍ-DOBA" class="box">
+  <div id="OTEVÍRACÍ-DOBA" class="box fade-in">
     <h2>OTEVÍRACÍ DOBA:</h2>
     <table class="schedule">
       <tr><td>Pondělí</td><td>9:00–12 | 13–16:30</td></tr>
@@ -40,13 +35,13 @@
     </table>
   </div>
 
-  <!-- Pravý box: O nás -->
-  <div id="onas" class="box">
+  <div id="onas" class="box fade-in">
     <h2>O NÁS:</h2>
     <p>
       Jsme obchod s chovatelskými potřebami pro psy, kočky, hlodavce, ptáky i terarijní zvířata. 
       Najdete u nás široký výběr krmiv, pamlsků, hraček a vybavení, které zpříjemní život vašim mazlíčkům 
       a zároveň vám usnadní každodenní péči.
+    </p>
     <p>
       Na trhu působíme již od roku 2012 a zakládáme si na osobním přístupu. 
       Rádi vám poradíme s výběrem, ať už sháníte krmení, nové akvárium, pelíšek nebo specializovanou péči pro vaše zvířecí kamarády. 
@@ -56,14 +51,13 @@
   </div>
 </section>
 
-<footer class="footer">
+<footer class="footer fade-in">
   <div class="container">
     <p class="slogan">Rádi vám poradíme s výběrem, aby se Váš mazlíček měl co nejlépe.</p>
 
     <div class="footer-contact">
-      <!-- Levý box: Kontakt -->
-      <div class="contact-box">
-        <div class="icon">📞</div>
+      <div class="contact-box fade-in">
+        <div class="icon">📱</div>
         <h3>Telefon</h3>
         <p><a href="tel:777775202">777 775 202</a></p>
 
@@ -71,13 +65,12 @@
         <h3>Email</h3>
         <p><a href="mailto:4tlapkysro@email.cz">4tlapkysro@email.cz</a></p>
 
-        <div class="icon" style="margin-top:15px;">📘</div>
+        <div class="icon" style="margin-top:15px;">❤️</div>
         <h3>Facebook</h3>
         <p><a href="https://www.facebook.com/profile.php?id=61556337299771&locale=cs_CZ" target="_blank">Navštivte nás</a></p>
       </div>
 
-      <!-- Pravý box: Adresa + mapa -->
-      <div class="contact-box">
+      <div class="contact-box fade-in">
         <div class="icon">📍</div>
         <h3>Kde nás najdete</h3>
         <p>nám. T. G. Masaryka 92/5</p>
@@ -90,6 +83,20 @@
     </div>
   </div>
 </footer>
+
+<script>
+  const elements = document.querySelectorAll('.fade-in');
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('show');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.1 });
+
+  elements.forEach(el => observer.observe(el));
+</script>
 
 </body>
 </html>
