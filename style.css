@@ -369,3 +369,68 @@ body {
   text-decoration: underline;
   color: #e68900;       /* tmavší oranžová při hoveru */
 }
+@media (max-width: 1024px) {
+  /* Hero sekce */
+  .hero {
+    height: 40vh;
+    background-attachment: scroll;
+    animation: none;
+  }
+
+  /* Header – vycentrování */
+  .header-container {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    padding: 0 5%;
+  }
+
+  /* Levý text loga */
+  .logo-left {
+    font-size: 6vw; /* dynamická velikost textu vlevo */
+    text-align: center;
+  }
+
+  /* Logo a TLAPKY */
+  .logo-right {
+    display: flex;
+    align-items: center;
+    gap: 4%;
+  }
+
+  .logo-right .logo-img {
+    height: 10vw; /* dynamická výška loga */
+  }
+
+  .logo-right h1 {
+    font-size: 8vw;  /* dynamická velikost textu TLAPKY */
+    margin: 0;
+    line-height: 1.1;
+    display: flex;
+    align-items: center;
+  }
+
+  /* Info boxy */
+  .info {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .info .box {
+    width: 90%;
+    min-width: auto;
+  }
+
+  /* Footer – kontakty */
+  .footer-contact {
+    flex-direction: column;
+    gap: 30px;
+    align-items: center;
+  }
+
+  .contact-box, .contact-box .footer-map iframe {
+    width: 90%;
+    height: auto;
+  }
+}
