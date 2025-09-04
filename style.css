@@ -32,7 +32,7 @@ body {
 
 .header-container {
   display: flex;
-  justify-content: center; /* vycentruje celý obsah */
+  justify-content: center;
   align-items: center;
   gap: 10px;
 }
@@ -47,7 +47,7 @@ body {
 
 .logo-right {
   display: flex;
-  align-items: center; /* vertikálně zarovná s logem */
+  align-items: center;
   gap: 10px;
 }
 
@@ -60,9 +60,9 @@ body {
   font-size: 70px;
   font-weight: 700;
   line-height: 1.2;
-  border-bottom: 3px solid #ff9800; /* čára pouze pod textem */
+  border-bottom: 3px solid #ff9800;
   padding-bottom: 5px;
-  display: inline-block; /* aby se čára zobrazila správně */
+  display: inline-block;
   text-align: center;
   vertical-align: middle;
 }
@@ -181,53 +181,56 @@ body {
   font-size: 28px;
 }
 
-.footer-contact {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 20px;
+/* --- Boxy v patičce (Kontakty + Kde nás najdete) --- */
+.footer .info {
+  gap: 30px;
 }
 
-.contact-box {
-  flex: 1;
-  min-width: 300px;
-  background: #fff;
-  color: #333;
-  padding: 30px;
+.footer .box {
+  flex: 1 0 300px;
+  padding: 25px;
   border-radius: 15px;
-  text-align: center;
   border: 2px solid #ff9800;
   box-shadow: 0 6px 15px rgba(0,0,0,0.05);
-  transition: transform 0.3s, box-shadow 0.3s;
+  background: #fff;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.contact-box:hover {
+.footer .box:hover {
   transform: translateY(-5px);
   box-shadow: 0 10px 25px rgba(0,0,0,0.1);
 }
 
-.contact-box .icon {
-  font-size: 36px;
-  margin-bottom: 10px;
+/* --- Kontakty uvnitř boxu --- */
+.contact-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 15px;
 }
 
-.contact-box h3 {
-  font-size: 20px;
-  margin-bottom: 8px;
+.contact-item i {
+  font-size: 28px;
+  color: #333;
+}
+
+.contact-item h3 {
+  margin: 0 0 5px 0;
   color: #ff9800;
+  font-size: 18px;
 }
 
-.contact-box p {
-  font-size: 16px;
+.contact-item p {
+  margin: 0;
 }
 
-.contact-box a {
-  color: #1877F2;
+.contact-item a {
   text-decoration: none;
+  color: #1877F2;
   transition: color 0.3s;
 }
 
-.contact-box a:hover {
+.contact-item a:hover {
   color: #ff9800;
   text-decoration: underline;
 }
@@ -253,7 +256,7 @@ body {
   }
 
   .logo-right {
-    flex-direction: row; /* logo vedle textu */
+    flex-direction: row;
     align-items: center;
   }
 
@@ -262,7 +265,7 @@ body {
   }
 
   .logo-right .tlapky-text {
-    font-size: 11vw; /* dynamická velikost na mobil */
+    font-size: 11vw;
     border-bottom: 3px solid #ff9800;
     padding-bottom: 5px;
   }
@@ -270,18 +273,11 @@ body {
   .info {
     flex-direction: column;
     align-items: center;
-    gap: 20px;
   }
 
-  .info .box, .contact-box {
+  .footer .box {
     width: 90%;
     min-width: auto;
-  }
-
-  .footer-contact {
-    flex-direction: column;
-    gap: 30px;
-    align-items: center;
   }
 }
 
@@ -304,5 +300,14 @@ body {
   text-decoration: underline;
   color: #e68900;
 }
+/* Kontakty */
+.contact-box {
+  flex: 0 0 200px; /* pevná šířka pro kontakty */
+  max-width: 320px;
+}
 
-
+/* Kde nás najdete */
+.location-box {
+  flex: 0 0 750px; /* pevná šířka pro mapu */
+  max-width: 750px;
+}
