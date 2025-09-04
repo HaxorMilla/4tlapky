@@ -32,29 +32,22 @@ body {
 
 .header-container {
   display: flex;
-  justify-content: center; /* vycentruje obsah */
+  justify-content: center; /* vycentruje celý obsah */
   align-items: center;
-  flex-wrap: nowrap;
-  padding: 0;
-  margin: 0 auto;
+  gap: 10px;
 }
 
-/* Levá část loga (pokud bude použitá) */
 .logo-left {
   font-family: 'Montserrat', sans-serif;
   font-size: 50px;
   font-weight: 700;
   text-align: center;
   color: #000;
-  margin-right: 20px;
-  border-bottom: none; /* žádná čára nahoře */
 }
 
-/* Pravá část (logo + TLAPKY) */
 .logo-right {
   display: flex;
-  flex-direction: row; /* logo a text vedle sebe */
-  align-items: center;
+  align-items: center; /* vertikálně zarovná s logem */
   gap: 10px;
 }
 
@@ -69,13 +62,15 @@ body {
   line-height: 1.2;
   border-bottom: 3px solid #ff9800; /* čára pouze pod textem */
   padding-bottom: 5px;
-  display: inline-block; /* důležité pro správné podtržení */
+  display: inline-block; /* aby se čára zobrazila správně */
   text-align: center;
+  vertical-align: middle;
 }
 
-/* --- Hero sekce --- */
+/* --- Hero wrapper --- */
 .hero-wrapper {
   width: 100%;
+  max-width: 100%;
   margin: 0;
   padding: 0;
   overflow: hidden;
@@ -249,7 +244,7 @@ body {
   transform: translateY(0);
 }
 
-/* --- Responzivní pro mobil/tablet --- */
+/* --- Responzivní úpravy --- */
 @media (max-width: 768px) {
   .hero {
     height: 40vh;
@@ -257,10 +252,9 @@ body {
     animation: none;
   }
 
-  /* Logo a TLAPKY stále vedle sebe */
   .logo-right {
-    flex-direction: row; 
-    gap: 8px;
+    flex-direction: row; /* logo vedle textu */
+    align-items: center;
   }
 
   .logo-right .logo-img {
@@ -268,7 +262,9 @@ body {
   }
 
   .logo-right .tlapky-text {
-    font-size: 30px;
+    font-size: 12vw; /* dynamická velikost na mobil */
+    border-bottom: 3px solid #ff9800;
+    padding-bottom: 5px;
   }
 
   .info {
@@ -286,11 +282,6 @@ body {
     flex-direction: column;
     gap: 30px;
     align-items: center;
-  }
-
-  .contact-box, .contact-box .footer-map iframe {
-    width: 90%;
-    height: auto;
   }
 }
 
@@ -312,23 +303,4 @@ body {
 .site-credit a:hover {
   text-decoration: underline;
   color: #e68900;
-}
-
-.logo-right .tlapky-text {
-  font-family: 'Montserrat', sans-serif;
-  font-size: 70px;
-  font-weight: 700;
-  line-height: 1.2;
-  border-bottom: 3px solid #ff9800; /* čára pouze pod textem */
-  padding-bottom: 5px;
-  display: inline-block; /* důležité, aby se čára vykreslila pod textem */
-  text-align: center;
-  vertical-align: middle; /* zarovná s logem */
-}
-
-.logo-right {
-  display: flex;
-  flex-direction: row; /* vedle sebe */
-  align-items: center;
-  gap: 10px;
 }
