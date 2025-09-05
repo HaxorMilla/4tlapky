@@ -310,4 +310,28 @@ body {
 .location-box {
   flex: 0 0 750px; /* pevná šířka pro mapu */
   max-width: 750px;
+
+}
+
+.logo-right .tlapky-text {
+  font-family: "Titan One", sans-serif;
+  font-size: 70px;
+  color: #ff9800;
+  text-shadow: 2px 2px 0 #333, 4px 4px 5px rgba(0,0,0,0.3);
+}
+
+.logo-right .tlapky-text {
+  font-family: "Chewy", system-ui;
+  font-size: 70px;
+  color: #ff9800;
+  animation: bounce 2s infinite;
+}
+
+.logo-right .tlapky-text {
+  font-family: "Chewy", system-ui;
+  font-size: 70px;
+  font-weight: 400;
+  background: linear-gradient(45deg, #ff9800, #ff5722, #ffcc80);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
