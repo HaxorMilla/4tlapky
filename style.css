@@ -56,7 +56,7 @@ body {
 }
 
 .logo-right .tlapky-text {
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Playwrite NZ", cursive;, system-ui;, sans-serif;
   font-size: 70px;
   font-weight: 700;
   line-height: 1.2;
@@ -310,4 +310,5 @@ body {
 .location-box {
   flex: 0 0 750px; /* pevná šířka pro mapu */
   max-width: 750px;
+
 }
