@@ -340,3 +340,50 @@ body {
   0%, 100% { transform: translateY(0); }
   50% { transform: translateY(-6px); }
 }
+
+/* --- Hodnocení zákazníků --- */
+.reviews {
+  max-width: 1200px;
+  margin: 80px auto;
+  text-align: center;
+  padding: 0 20px;
+}
+
+.reviews h2 {
+  font-size: 36px;
+  color: #ff9800;
+  margin-bottom: 40px;
+}
+
+.review-box {
+  background: #fff;
+  border-radius: 20px;
+  padding: 25px;
+  margin: 20px auto;
+  max-width: 600px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.review-box:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 15px 35px rgba(0,0,0,0.15);
+}
+
+.stars {
+  font-size: 26px;
+  color: #ffb703;
+  margin-bottom: 10px;
+}
+
+.review-box p {
+  font-size: 17px;
+  color: #444;
+  margin-bottom: 10px;
+}
+
+.review-box span {
+  font-weight: bold;
+  color: #666;
+}
+
