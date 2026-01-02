@@ -4,31 +4,53 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>4TLAPKY</title>
+
+  <!-- CSS -->
   <link rel="stylesheet" href="style.css">
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Roboto:wght@400&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
+
+  <!-- Fonty -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Chewy&family=Combo&family=Playwrite+NZ:wght@100..400&family=Ranchers&family=Titan+One&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Chewy&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 
+  <!-- Ikony -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 <body>
 
+<!-- HLAVIČKA -->
 <header class="header">
- <div class="header-container" style="justify-content: center;"> <!-- vycentrované -->
-    <h1 class="logo-left underline"></h1>
- <div class="logo-right">
-  <img src="logo.png" alt="Logo 4Tlapky" class="logo-img">
-  <h1 class="tlapky-text">TLAPKY</h1>
-</div>
+  <div class="header-container">
+
+    <!-- Logo vlevo -->
+    <div class="logo-left">
+      <img src="logo.png" alt="Tlapky" class="logo-img">
+      <span class="logo-text">TLAPKY</span>
+    </div>
+
+    <!-- Menu vpravo -->
+    <nav class="main-nav">
+      <a href="#onas">O nás</a>
+      <a href="#OTEVÍRACÍ-DOBA">Otevírací doba</a>
+      <a href="#kontakt">Kontakt</a>
+    </nav>
+
+    <!-- Hamburger -->
+    <div class="hamburger">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+
   </div>
 </header>
 
+<!-- HERO -->
 <section class="hero-wrapper">
   <div class="hero"></div>
 </section>
 
+<!-- O NÁS + OTEVÍRACÍ DOBA -->
 <section class="info container">
   <div id="OTEVÍRACÍ-DOBA" class="box fade-in">
     <h2>OTEVÍRACÍ DOBA:</h2>
@@ -59,74 +81,67 @@
   </div>
 </section>
 
+<!-- HODNOCENÍ + KONTAKTY -->
+<section class="info reviews-contact fade-in">
+
+  <!-- LEVÝ SLUPEC: Hodnocení -->
+  <div class="column">
+    <div class="box review-box">
+      <h2>Hodnocení zákazníků</h2>
+
+      <div class="stars">★★★★★</div>
+      <p>„Skvělý přístup, ochotný personál a velký výběr.“</p>
+      <span>— Jana K.</span>
+
+      <div class="stars">★★★★★</div>
+      <p>„Vždy perfektní servis a milý přístup.“</p>
+      <span>— Petr M.</span>
+
+      <div class="stars">★★★★★</div>
+      <p>„Příjemné prostředí a milý personál.“</p>
+      <span>— Lucie D.</span>
+    </div>
+  </div>
+
+  <!-- PRAVÝ SLUPEC: Kontakty -->
+  <div class="column">
+    <div class="box contact-box" id="kontakt">
+      <h2>Kontakt</h2>
+
+      <div class="contact-item">
+        <i class="fas fa-phone"></i>
+        <div>
+          <h3>Telefon</h3>
+          <p><a href="tel:777775202">777 775 202</a></p>
+        </div>
+      </div>
+
+      <div class="contact-item">
+        <i class="fas fa-envelope"></i>
+        <div>
+          <h3>Email</h3>
+          <p><a href="mailto:4tlapkysro@email.cz">4tlapkysro@email.cz</a></p>
+        </div>
+      </div>
+
+      <div class="contact-item">
+        <i class="fab fa-instagram"></i>
+        <div>
+          <h3>Instagram</h3>
+          <p><a href="https://www.instagram.com/chovatelky4tlapky" target="_blank">Navštivte nás</a></p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</section>
+
+<!-- PATIČKA -->
 <footer class="footer fade-in">
   <div class="container">
     <p class="slogan">🧡Pomůžeme vám vybrat to nejlepší pro vaše mazlíčky🧡</p>
 
-    <section class="reviews fade-in">
-  <h2>Hodnocení zákazníků</h2>
-
-  <div class="review-box">
-    <div class="stars">★★★★★</div>
-    <p>„Skvělý přístup, ochotný personál a velký výběr. Rádi se vracíme!“</p>
-    <span>— Jana K.</span>
-  </div>
-
-  <div class="review-box">
-    <div class="stars">★★★★★</div>
-    <p>„Nejlepší chovatelské potřeby v okolí. Vždy poradí a pomůžou.“</p>
-    <span>— Petr M.</span>
-  </div>
-
-  <div class="review-box">
-    <div class="stars">★★★★★</div>
-    <p>„Příjemné prostředí, skvělé ceny a milý personál.“</p>
-    <span>— Lucie D.</span>
-  </div>
-</section>
-
-    
     <div class="info">
-      <!-- Kontakty -->
-      <div class="box contact-box fade-in">
-        <h2>Kontakt</h2>
-        <!-- Telefon -->
-        <div class="contact-item">
-          <i class="fas fa-phone"></i>
-          <div>
-            <h3>Telefon</h3>
-            <p><a href="tel:777775202">777 775 202</a></p>
-          </div>
-        </div>
-
-        <!-- Email -->
-        <div class="contact-item">
-          <i class="fas fa-envelope"></i>
-          <div>
-            <h3>Email</h3>
-            <p><a href="mailto:4tlapkysro@email.cz">4tlapkysro@email.cz</a></p>
-          </div>
-        </div>
-
-        <!-- Instagram -->
-        <div class="contact-item">
-          <i class="fab fa-instagram"></i>
-          <div>
-            <h3>Instagram</h3>
-            <p><a href="https://www.instagram.com/chovatelky4tlapky" target="_blank">Navštivte nás</a></p>
-          </div>
-        </div>
-
-        <!-- Facebook -->
-        <div class="contact-item">
-          <i class="fab fa-facebook"></i>
-          <div>
-            <h3>Facebook</h3>
-            <p><a href="https://www.facebook.com/profile.php?id=61556337299771&locale=cs_CZ" target="_blank">Navštivte nás</a></p>
-          </div>
-        </div>
-      </div>
-
       <!-- Kde nás najdete -->
       <div class="box location-box fade-in">
         <h2>Kde nás najdete</h2>
@@ -141,22 +156,31 @@
   </div>
 </footer>
 
+<!-- Fade-in + Hamburger JS -->
 <script>
-  const elements = document.querySelectorAll('.fade-in');
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('show');
-        observer.unobserve(entry.target);
-      }
-    });
-  }, { threshold: 0.1 });
+const elements = document.querySelectorAll('.fade-in');
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if(entry.isIntersecting){
+      entry.target.classList.add('show');
+      observer.unobserve(entry.target);
+    }
+  });
+},{threshold:0.1});
+elements.forEach(el => observer.observe(el));
 
-  elements.forEach(el => observer.observe(el));
+// Hamburger menu
+const hamburger = document.querySelector('.hamburger');
+const nav = document.querySelector('.main-nav');
+hamburger.addEventListener('click', () => {
+  nav.classList.toggle('active');
+  hamburger.classList.toggle('active');
+});
 </script>
 
 <div class="site-credit">
   Tento web vytvořil: <a href="https://www.jan-muller.cz/" target="_blank">Jan Müller</a>
 </div>
+
 </body>
 </html>
