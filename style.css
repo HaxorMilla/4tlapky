@@ -543,35 +543,42 @@ body {
   width: 100%;
 }
 
-/* --- Vycentrovaná sekce "Kde nás najdete" --- */
-.location-box {
-  width: 100%;
-  max-width: 500px;           /* stejná šířka jako ostatní boxy */
-  background: #fff;
+/* --- Spodní footer --- */
+.footer-bottom {
+  background: #333;           /* tmavý pozadí */
+  color: #fff;                /* bílý text */
+  padding: 15px 0;
+  font-size: 14px;
+  text-align: center;
+  border-top: 2px solid #ff9800; /* oranžová linka nahoře */
+}
+
+.footer-bottom a {
+  color: #ff9800;             /* oranžové odkazy */
+  text-decoration: none;
+}
+
+.footer-bottom a:hover {
+  text-decoration: underline;
+}
+
+.map-section {
+  width: 70%;
+  max-width: 1040px;
+  margin: 40px auto;
   border-radius: 15px;
-  border: 2px solid #ff9800;
-  padding: 25px;
+  overflow: hidden; /* zaoblené rohy */
   box-shadow: 0 6px 15px rgba(0,0,0,0.05);
-  
-  display: flex;
-  flex-direction: column;      /* vertikální uspořádání */
-  align-items: center;         /* horizontální vycentrování */
-  text-align: center;          /* text doprostřed */
 }
 
-.location-box h2 {
-  margin-bottom: 15px;
-  color: #ff9800;
-}
-
-.location-box p {
-  margin: 5px 0;
-}
-
-.footer-map iframe {
-  width: 100%;
-  height: 300px;
+.map-container iframe {
+  width: 50%;
+  height: 450px;
   border: 0;
-  border-radius: 10px;
+}
+
+.map-box {
+  max-width: 800px; /* zmenšená šířka */
+  margin: 0 auto;   /* vycentrování */
 }
 
