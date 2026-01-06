@@ -808,5 +808,92 @@ body {
   }
 }
 
+@media (max-width: 768px) {
+
+  /* --- Header flex úprava: logo vlevo, hamburger vpravo --- */
+  .header-container {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+  }
+
+  .logo-left {
+    order: 1;
+    flex: 1;
+    justify-content: flex-start;
+  }
+
+  .hamburger {
+    order: 2;
+  }
+
+  /* --- Menu přes celou šířku --- */
+  .main-nav {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    max-height: 0;
+    overflow: hidden;
+    flex-direction: column;
+    background: #fff;
+    padding: 0;
+    transition: max-height 0.4s ease;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    z-index: 999;
+  }
+
+  .main-nav.active {
+    max-height: 400px;
+  }
+
+  /* --- Hero skrytý, mobilní text viditelný --- */
+  .hero-wrapper {
+    display: none;
+  }
+
+  .mobile-hero-text {
+    display: block;
+    text-align: center;
+    padding: 25px 20px;
+    font-family: "Chewy", system-ui;
+    font-size: 26px;
+    color: #ff9800;
+    background: #fff;
+  }
+
+  /* --- Info boxy, hodnocení a kontakty --- */
+  .info,
+  .reviews-contact {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+
+  .info .box,
+  .review-box,
+  .contact-box,
+  .map-box {
+    width: 100%;
+    max-width: 400px;   /* stejné jako O Nás */
+    box-sizing: border-box;
+    margin: 10px auto;  /* vycentrování, viditelné ohraničení */
+    border: 2px solid #ff9800; /* zaručené viditelné orámování */
+    border-radius: 15px;
+    padding: 25px;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.05);
+    text-align: center;
+  }
+
+  /* --- Tabulka otevírací doby --- */
+  .schedule td {
+    font-size: 15px;
+    padding: 8px 10px;
+  }
+}
+
+
 
 
