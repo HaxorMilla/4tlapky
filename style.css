@@ -597,4 +597,11 @@ body {
   }
 }
 
+@media (max-width: 768px) {
+  .hero {
+    background-attachment: initial !important;
+  }
+}
+
+
 
