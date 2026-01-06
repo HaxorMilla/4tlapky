@@ -584,6 +584,7 @@ body {
 
 .hero {
   width: 100%;
+  background-color: red;
   min-height: 60vh;
   background-image: url("pozadi.png");
   background-size: cover;
@@ -597,6 +598,7 @@ body {
     background-attachment: initial !important;
   }
 }
+
 
 
 
