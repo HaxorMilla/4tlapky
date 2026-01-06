@@ -948,6 +948,70 @@ body {
   }
 }
 
+/* --- Kontakty vyrovnané jako ostatní boxy --- */
+.contact-box {
+  width: 100%;          /* zabere celý sloupec */
+  max-width: 400px;     /* stejná max šířka jako O Nás / Hodnocení */
+  padding: 25px;
+  border: 2px solid #ff9800;
+  border-radius: 15px;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.05);
+  display: flex;        /* flex pro vycentrování obsahu */
+  flex-direction: column;
+  align-items: center;  /* horizontální vycentrování kontaktů */
+  gap: 20px;            /* mezera mezi jednotlivými kontakty */
+  text-align: center;   /* text uprostřed */
+  box-sizing: border-box;
+}
+
+/* Vnitřní kontakty (ikona + text) */
+.contact-item {
+  width: 100%;          /* každý kontakt zabere celou šířku boxu */
+  max-width: 320px;     /* případně omezení, aby nebyl moc dlouhý */
+  display: flex;
+  flex-direction: column; 
+  align-items: center;   /* vycentrování ikon a textu */
+  gap: 5px;
+  margin: 0 auto;       /* vycentrování v rámci boxu */
+}
+
+.contact-item i {
+  font-size: 28px;
+  color: #333;
+}
+
+.contact-item h3 {
+  margin: 0;
+  color: #ff9800;
+  font-size: 18px;
+}
+
+.contact-item p {
+  margin: 0;
+}
+
+.contact-item a {
+  text-decoration: none;
+  color: #1877F2;
+  transition: color 0.3s;
+}
+
+.contact-item a:hover {
+  color: #ff9800;
+  text-decoration: underline;
+}
+
+/* --- Mobilní fix --- */
+@media (max-width: 768px) {
+  .contact-box {
+    max-width: 400px; /* stejné jako ostatní boxy */
+    width: 100%;
+  }
+  .contact-item {
+    max-width: 100%;  /* zabere celý box na mobilu */
+  }
+}
+
 
 
 
