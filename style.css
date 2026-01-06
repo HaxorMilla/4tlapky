@@ -599,7 +599,7 @@ body {
     display: block;
     text-align: center;
     padding: 25px 20px;
-    font-family: "Chewy", system-ui;
+    font-family: "Poppins", system-ui;
     font-size: 26px;
     color: #ff9800;
     background: #fff;
@@ -1086,6 +1086,7 @@ body {
     width: 100%;
   }
 }
+
 
 
 
