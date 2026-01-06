@@ -598,6 +598,26 @@ body {
   }
 }
 
+.mobile-hero-text {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .hero-wrapper {
+    display: none;
+  }
+
+  .mobile-hero-text {
+    display: block;
+    text-align: center;
+    padding: 40px 20px;
+    font-family: "Chewy", system-ui;
+    font-size: 28px;
+    color: #ff9800;
+  }
+}
+
+
 
 
 
