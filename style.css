@@ -256,3 +256,74 @@ body {
     width: 100%;
   }
 }
+
+.schedule {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 16px;
+}
+
+.schedule td {
+  padding: 10px 14px;
+  border-bottom: 1px solid #ddd;
+}
+
+.schedule tr:nth-child(even) {
+  background: #f3f3f3;
+}
+
+.schedule tr:last-child td {
+  border-bottom: none;
+}
+
+@media (min-width: 769px) {
+  .reviews-contact {
+    display: flex;
+    gap: 40px;
+    justify-content: center;
+    align-items: stretch;
+    max-width: 1000px;
+    margin: 60px auto;
+  }
+
+  .review-box,
+  .contact-box {
+    flex: 1;
+  }
+}
+
+.btn-call {
+  display: inline-block;
+  margin-top: 15px;
+  padding: 12px 25px;
+  background: #ff9800;
+  color: #fff;
+  border-radius: 30px;
+  font-weight: bold;
+  text-decoration: none;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+  transition: all 0.3s ease;
+}
+
+.btn-call:hover {
+  background: #e68900;
+  transform: translateY(-2px);
+}
+
+.site-credit {
+  text-align: center;
+  font-size: 14px;
+  color: #777;
+  margin: 20px 0;
+}
+
+@media (max-width: 768px) {
+  .reviews-contact {
+    flex-direction: column;
+    width: 90%;
+    margin: 30px auto;
+  }
+}
+
+
+
