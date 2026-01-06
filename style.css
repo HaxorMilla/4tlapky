@@ -894,6 +894,19 @@ body {
   }
 }
 
+/* --- Skrytí textu na desktopu --- */
+.mobile-hero-text {
+  display: none; /* defaultně skryté */
+}
+
+/* --- Na mobilu zobrazit --- */
+@media (max-width: 768px) {
+  .mobile-hero-text {
+    display: block; /* jen mobil */
+  }
+}
+
+
 
 
 
