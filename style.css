@@ -633,3 +633,79 @@ body {
     right: 0;
   }
 }
+
+/* =========================
+   MOBILNÍ DOPLNĚK – HEADER + BOXY
+   NIC NEMAŽ
+   ========================= */
+@media (max-width: 768px) {
+
+  /* --- Header flex úprava: logo vlevo, hamburger vpravo --- */
+  .header-container {
+    flex-direction: row; /* vedle sebe */
+    justify-content: space-between; /* logo vlevo, hamburger vpravo */
+    align-items: center;
+    padding: 15px 20px;
+  }
+
+  .logo-left {
+    order: 1;
+    flex: 1;
+    justify-content: flex-start;
+  }
+
+  .hamburger {
+    order: 2;
+  }
+
+  /* --- Menu přes celou šířku --- */
+  .main-nav {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    max-height: 0;
+    overflow: hidden;
+    flex-direction: column;
+    background: #fff;
+    gap: 20px;
+    padding: 0;
+    transition: max-height 0.4s ease;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    z-index: 999;
+  }
+
+  /* --- Hodnocení a Kontakty stejné šířky jako O Nás --- */
+  .reviews-contact,
+  .info {
+    width: 90%;
+    max-width: 400px; /* stejné jako boxy O Nás */
+    margin: 30px auto;
+  }
+
+  .review-box,
+  .contact-box {
+    width: 100%;
+    min-width: unset;
+    max-width: 100%;
+  }
+
+  /* --- Mobile Hero Text --- */
+  .mobile-hero-text {
+    display: block;
+    text-align: center;
+    padding: 25px 20px;
+    font-family: "Chewy", system-ui;
+    font-size: 26px;
+    color: #ff9800;
+    background: #fff;
+  }
+
+  /* --- Sjednocení šířky všech info boxů --- */
+  .info .box {
+    width: 100%;
+    min-width: unset;
+    max-width: 100%;
+  }
+}
+
