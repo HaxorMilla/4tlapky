@@ -1012,6 +1012,82 @@ body {
   }
 }
 
+/* ======================
+   KONTAKTY – FIX “NUDLE”
+   ====================== */
+
+/* Sloupec s kontakty */
+.reviews-contact .column.contact-column {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  flex: 1 1 400px;   /* pevná základní šířka */
+  max-width: 500px;   /* stejná jako review-box */
+  margin: 0 auto;
+}
+
+/* Kontakt-box */
+.contact-box {
+  width: 100%;              /* zabere celý sloupec */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 25px;
+  border-radius: 15px;
+  border: 2px solid #ff9800;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.05);
+  text-align: center;
+}
+
+/* Vnitřní kontakty */
+.contact-item {
+  width: 100%;           /* každý kontakt zabere celý box */
+  max-width: 380px;      /* aby nebyl moc dlouhý */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  margin: 0 auto;
+}
+
+.contact-item i {
+  font-size: 28px;
+  color: #333;
+}
+
+.contact-item h3 {
+  margin: 0;
+  font-size: 18px;
+  color: #ff9800;
+}
+
+.contact-item p, .contact-item a {
+  margin: 0;
+  text-align: center;
+}
+
+.contact-item a {
+  text-decoration: none;
+  color: #1877F2;
+  transition: color 0.3s;
+}
+
+.contact-item a:hover {
+  color: #ff9800;
+  text-decoration: underline;
+}
+
+/* Mobilní fix */
+@media (max-width: 768px) {
+  .reviews-contact .column.contact-column,
+  .contact-box,
+  .contact-item {
+    max-width: 100%;
+    width: 100%;
+  }
+}
+
+
 
 
 
