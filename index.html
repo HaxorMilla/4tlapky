@@ -22,7 +22,6 @@
 <header class="header">
   <div class="header-container">
 
-	  
     <!-- Logo vlevo -->
     <div class="logo-left">
       <img src="logo.png" alt="Tlapky" class="logo-img">
@@ -44,20 +43,12 @@
     </div>
 
   </div>
-
-	  
-</div>
-	
 </header>
 
 <!-- HERO -->
 <section class="hero-wrapper">
   <div class="hero"></div>
 </section>
-
-		  <div class="mobile-hero-text">
-  🐾 Vše pro vaše mazlíčky<br>
-  s láskou od roku 2012
 
 <!-- O NÁS + OTEVÍRACÍ DOBA -->
 <section class="info container">
@@ -183,24 +174,35 @@ const observer = new IntersectionObserver((entries) => {
 },{threshold:0.1});
 elements.forEach(el => observer.observe(el));
 
-// Hamburger menu
+// Hamburger menu – UX fix
 const hamburger = document.querySelector('.hamburger');
 const nav = document.querySelector('.main-nav');
+const navLinks = document.querySelectorAll('.main-nav a');
+
 hamburger.addEventListener('click', () => {
   nav.classList.toggle('active');
   hamburger.classList.toggle('active');
 });
+
+// po kliknutí na položku menu se menu zavře
+navLinks.forEach(link => {
+  link.addEventListener('click', () => {
+    nav.classList.remove('active');
+    hamburger.classList.remove('active');
+  });
+});
 </script>
 
-	<!-- FOOTER -->
+<!-- FOOTER -->
 <footer class="footer-bottom">
   <div class="container footer-bottom-container">
-    <p>nám. T. G. Masaryka 92/5, 751 31 Lipník nad Bečvou   IČO:02012146 | DIČ: CZ02012146</p> 
+    <p>nám. T. G. Masaryka 92/5, 751 31 Lipník nad Bečvou | IČO:02012146 | DIČ: CZ02012146</p> 
   </div>
 </footer>
 
 </body>
 </html>
+
 
 
 
