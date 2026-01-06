@@ -709,3 +709,104 @@ body {
   }
 }
 
+/* =========================
+   MOBILNÍ DOPLNĚK – HEADER + BOXY
+   NIC NEMAŽ
+   ========================= */
+@media (max-width: 768px) {
+
+  /* --- Header flex úprava: logo vlevo, hamburger vpravo --- */
+  .header-container {
+    flex-direction: row; /* vedle sebe */
+    justify-content: space-between; /* logo vlevo, hamburger vpravo */
+    align-items: center;
+    padding: 15px 20px;
+  }
+
+  .logo-left {
+    order: 1;
+    flex: 1;
+    justify-content: flex-start;
+  }
+
+  .hamburger {
+    order: 2;
+  }
+
+  /* --- Menu přes celou šířku --- */
+  .main-nav {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    max-height: 0;
+    overflow: hidden;
+    flex-direction: column;
+    background: #fff;
+    gap: 20px;
+    padding: 0;
+    transition: max-height 0.4s ease;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    z-index: 999;
+  }
+
+  /* --- Sjednocení šířky boxů info, hodnocení a kontakty na mobilu --- */
+  .info,
+  .reviews-contact {
+    display: flex;          /* zachová flex pro případně víc boxů */
+    flex-direction: column; /* sloupcově */
+    align-items: center;    /* vycentrování */
+    gap: 20px;
+    width: 100%;
+    max-width: 400px;       /* stejné jako box O Nás */
+    margin: 30px auto;
+  }
+
+  .info .box,
+  .review-box,
+  .contact-box,
+  .map-box {
+    width: 100%;
+    max-width: 400px;       /* stejné jako O Nás */
+    min-width: unset;
+    text-align: center;     /* vycentrovaný obsah */
+    border: 2px solid #ff9800; /* zaručí viditelné orámování */
+    box-shadow: 0 6px 15px rgba(0,0,0,0.05);
+  }
+
+  /* --- Tabulka otevírací doby se nerozbije --- */
+  .schedule td {
+    font-size: 15px;
+    padding: 8px 10px;
+  }
+
+  /* --- Mobile Hero Text --- */
+  .hero-wrapper {
+    display: none;          /* skrytí hero obrázku */
+  }
+
+  .mobile-hero-text {
+    display: block;
+    text-align: center;
+    padding: 25px 20px;
+    font-family: "Chewy", system-ui;
+    font-size: 26px;
+    color: #ff9800;
+    background: #fff;
+  }
+
+  /* --- Sjednocení šířky všech info boxů --- */
+  .info .box {
+    width: 100%;
+    min-width: unset;
+    max-width: 400px;
+  }
+
+  /* --- Menu UX fix přes celou šířku --- */
+  .main-nav.active {
+    max-height: 400px; /* dostatečně vysoké pro všechny položky */
+  }
+}
+
+
+
