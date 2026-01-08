@@ -595,15 +595,17 @@ body {
   }
 
   /* ✅ mobilní text pod hlavičkou */
-  .mobile-hero-text {
-    display: block;
-    text-align: center;
-    padding: 25px 20px;
-    font-family: "Poppins", system-ui;
-    font-size: 26px;
-    color: #ff9800;
-    background: #fff;
-  }
+.mobile-hero-text {
+  display: none;
+  text-align: center;
+  padding: 25px 20px;
+  font-family: 'Dancing Script', cursive;
+  font-size: 34px;
+  font-weight: 600;
+  color: #ff9800;
+  background: #fff;
+  letter-spacing: 1px;
+}
 
   /* 📦 sjednocení šířky VŠECH boxů */
   .info,
@@ -691,15 +693,17 @@ body {
   }
 
   /* --- Mobile Hero Text --- */
-  .mobile-hero-text {
-    display: block;
-    text-align: center;
-    padding: 25px 20px;
-    font-family: "Chewy", system-ui;
-    font-size: 26px;
-    color: #ff9800;
-    background: #fff;
-  }
+.mobile-hero-text {
+  display: none;
+  text-align: center;
+  padding: 25px 20px;
+  font-family: 'Dancing Script', cursive;
+  font-size: 34px;
+  font-weight: 600;
+  color: #ff9800;
+  background: #fff;
+  letter-spacing: 1px;
+}
 
   /* --- Sjednocení šířky všech info boxů --- */
   .info .box {
@@ -785,15 +789,17 @@ body {
     display: none;          /* skrytí hero obrázku */
   }
 
-  .mobile-hero-text {
-    display: block;
-    text-align: center;
-    padding: 25px 20px;
-    font-family: "Chewy", system-ui;
-    font-size: 26px;
-    color: #ff9800;
-    background: #fff;
-  }
+ .mobile-hero-text {
+  display: none;
+  text-align: center;
+  padding: 25px 20px;
+  font-family: 'Dancing Script', cursive;
+  font-size: 34px;
+  font-weight: 600;
+  color: #ff9800;
+  background: #fff;
+  letter-spacing: 1px;
+}
 
   /* --- Sjednocení šířky všech info boxů --- */
   .info .box {
@@ -1093,6 +1099,7 @@ body {
     width: 100%;
   }
 }
+
 
 
 
