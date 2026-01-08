@@ -1100,8 +1100,29 @@ body {
   }
 }
 
+/* =========================
+   MOBILE HERO TEXT – FINÁL
+   ========================= */
 
+/* desktop – skryto */
+.mobile-hero-text {
+  display: none;
+}
 
+/* mobil – viditelné */
+@media (max-width: 768px) {
+  .mobile-hero-text {
+    display: block;
+    text-align: center;
+    padding: 25px 20px;
+    font-family: 'Dancing Script', cursive;
+    font-size: 34px;
+    font-weight: 600;
+    color: #ff9800;
+    background: #fff;
+    letter-spacing: 1px;
+  }
+}
 
 
 
