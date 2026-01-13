@@ -1124,6 +1124,31 @@ body {
   }
 }
 
+/* =========================
+   FIX LOGA – MOBIL
+   ========================= */
+@media (max-width: 768px) {
+
+  .logo-left {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    flex: 0 0 auto;          /* ⬅️ ZRUŠÍ roztahování */
+    white-space: nowrap;    /* ⬅️ ZAKÁŽE zalomení */
+  }
+
+  .logo-text {
+    font-size: 20px;        /* ⬅️ menší text */
+    white-space: nowrap;   /* ⬅️ pojistka */
+    line-height: 1;
+  }
+
+  .logo-img {
+    height: 32px;           /* ⬅️ menší logo */
+    width: auto;
+  }
+}
+
 
 
 
